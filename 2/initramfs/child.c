@@ -11,9 +11,11 @@ int main() {
   memset(&sa, 0, sizeof(sa));
   sa.sa_handler = &bypass_sigint;
   sigaction(SIGFPE, &sa,NULL);
+  a = 1;
+  b = 0;
   while (1) {
     sleep(1);
-    printf("do nothing\n");
+    c = a / b;
   }
   return 0;
 }

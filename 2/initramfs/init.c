@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <signal.h>
+#include <wait.h>
 
 int main() {
   int child_pid;
@@ -10,10 +11,7 @@ int main() {
     char* argv[] = { "child", NULL };
     execve("child", argv, NULL);
   } else {
-    while (1) {
-      sleep(5);
-      kill(child_pid, SIGFPE);
-    }
+    waitpid(child_pid, NULL, 0);
   }
   return 0;
 }
