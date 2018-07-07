@@ -7,7 +7,7 @@ int main() {
   while(1) {
     printf("Do nothing \n");
     read_int();
-    wait(1);
+    sleep(5);
   }
   return 0;
 }
