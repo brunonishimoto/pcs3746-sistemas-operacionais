@@ -1,7 +1,7 @@
 [submodule "1/linux"]
 	path = 1/linux
 	url = git@github.com:matheusssf/linux.git
-	branch = feature/add-sys-call
+	branch = master
 [submodule "3/initramfs/busybox"]
 	path = 3/initramfs/busybox/busybox
 	url = git://busybox.net/busybox.git
